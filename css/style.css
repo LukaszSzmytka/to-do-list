@@ -5,3 +5,12 @@ html {
 *, ::after, ::before {
     box-sizing: inherit;
 }
+
+.body {
+    max-width: 1000px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: lightgray;
+}

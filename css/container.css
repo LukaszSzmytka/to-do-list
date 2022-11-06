@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    gap: 2px;
+
+}
+
+.container__items {
+    background-color: white;
+    padding: 10px;
+
+}
+
+.container__items--title {
+    background-color: lightgray;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.container__items--subTitle {
+    font-size: large;
+    font-weight: bold;
+}
+
+.container__items--list {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 5px;
+}

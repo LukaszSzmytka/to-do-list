@@ -1,0 +1,16 @@
+.list {
+    padding-inline-start: unset;
+    margin: 0;
+
+}
+
+.list__items {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    padding: 5px;
+    border-bottom: 2px solid lightgray;
+}
+
+.list__itemsText {
+    padding: 5px;
+}
