@@ -12,25 +12,37 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/container.css" />
+    <link rel="stylesheet" href="css/list.css" />
+    <link rel="stylesheet" href="css/form.css" />
     <script defer src="js/script.js"></script>
   </head>
-  <body>
 
-
-    <h1>Lista zadań</h1>
-
-    <h2>Dodaj nowe zadanie</h2>
-
-    <form class="js-form">
-      <input class="js-newTask" />
-      <button>Dodaj zadanie</button>
-    </form>
-
-    <h3>Lista zadań</h3>
-    
-    <ul class="js-tasks" ></ul>
- 
-
-</body>
+  <body class="body">
+    <div class="container">
+      <div class="container__items container__items--title">
+        Lista zadań
+      </div>
+      <div class="container__items container__items--subTitle">
+        Dodaj nowe zadanie
+      </div>
+      <div class="container__items">
+        <form class="js-form form">
+          <input class="js-newTask form__items form__items--input" />
+          <button class="form__items form__items--button">Dodaj zadanie</button>
+        </form>
+      </div>
+      <div class="container__items container__items--list">
+        Lista zadań
+      </div>
+      <div class="container__items">
+        <ul class="js-tasks list"></ul>
+      </div>
+    </div>
+  </body>
 </html>
