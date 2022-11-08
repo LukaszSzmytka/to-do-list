@@ -7,10 +7,9 @@ html {
 }
 
 .body {
-    max-width: 1000px;
+    max-width: 900px;
     width: 100%;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 50px auto;
     font-family: 'Ubuntu', sans-serif;
     background-color: lightgray;
 }
