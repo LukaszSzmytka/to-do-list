@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista zadań</title>
+    <link rel="icon" href="images/logo192.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -28,18 +29,28 @@
       <div class="container__items container__items--title">
         Lista zadań
       </div>
+
       <div class="container__items container__items--subTitle">
         Dodaj nowe zadanie
       </div>
+
       <div class="container__items">
         <form class="js-form form">
-          <input class="js-newTask form__items form__items--input" />
-          <button class="form__items form__items--button">Dodaj zadanie</button>
+          <input
+            class="js-newTask form__items form__items--input"
+            placeholder="Co jest do zrobienia?"
+            autofocus
+          />
+          <button class="js-newTaskButton form__items form__items--button">
+            Dodaj zadanie
+          </button>
         </form>
       </div>
+
       <div class="container__items container__items--list">
         Lista zadań
       </div>
+
       <div class="container__items">
         <ul class="js-tasks list"></ul>
       </div>
