@@ -1,12 +1,17 @@
 .container {
     display: grid;
     gap: 2px;
+    margin: 10px;
+    padding: 10px;
+    grid-auto-rows: minmax(60px, auto);
 
 }
 
 .container__items {
     background-color: white;
     padding: 10px;
+    display: grid;
+    align-items: center;
 
 }
 
@@ -14,6 +19,7 @@
     background-color: lightgray;
     font-size: xx-large;
     font-weight: bold;
+    padding: 0;
 }
 
 .container__items--subTitle {
