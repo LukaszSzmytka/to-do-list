@@ -23,9 +23,9 @@ const bindEvents = () => {
     });
   });
 
-  const toggleDoneButtons = document.querySelectorAll(".js-done");
-  toggleDoneButtons.forEach((toggleDoneButton, index) => {
-    toggleDoneButton.addEventListener("click", () => {
+  const doneButtons = document.querySelectorAll(".js-done");
+  doneButtons.forEach((doneButton, index) => {
+    doneButton.addEventListener("click", () => {
       toggleTaskDone(index);
     });
   });
@@ -35,15 +35,16 @@ const render = () => {
   let htmlString = "";
   for (const task of tasks) {
     htmlString += `
-            <li class="list__items"
-              ${task.done ? ' style="text-decoration: line-through"' : ""}
-            >
-            <button class="js-done list__itemsText">zrobione?</button>
+       <li class="list__items">
+
+          <button class="js-done list__itemsText list__itemsText--buttons">${task.done ? "✅" : "🟩"}</button>
             
-              <span class="list__itemsText">${task.content}</span>
-              <button class="js-remove list__itemsText">usuń</button>
-            </li>
-            `;
+          <span class="list__itemsText${task.done ? " list__itemsText--done" : ""}">${task.content}</span>
+
+          <button class="js-remove list__itemsText list__itemsText--buttons">🚮</button>
+
+       </li>
+     `;
   }
   document.querySelector(".js-tasks").innerHTML = htmlString;
   bindEvents();
@@ -51,11 +52,18 @@ const render = () => {
 
 const onFormSubmit = (event) => {
   event.preventDefault();
-  const newTaskContent = document.querySelector(".js-newTask").value.trim();
+
+  const inputField = document.querySelector(".js-newTask");
+  const newTaskContent = inputField.value.trim();
+
+  inputField.focus();
+
   if (newTaskContent === "") {
     return;
   }
+
   addNewTask(newTaskContent);
+  inputField.value = "";
 };
 
 const init = () => {
@@ -63,4 +71,5 @@ const init = () => {
   const form = document.querySelector(".js-form");
   form.addEventListener("submit", onFormSubmit);
 };
+
 init();
