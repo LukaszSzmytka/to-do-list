@@ -37,11 +37,11 @@ const render = () => {
     htmlString += `
        <li class="list__items">
 
-          <button class="js-done list__itemsText list__itemsText--buttons">${task.done ? "✅" : "🟩"}</button>
+          <button class="js-done list__buttons list__buttons--done">${task.done ? "✓" : ""}</button>
             
           <span class="list__itemsText${task.done ? " list__itemsText--done" : ""}">${task.content}</span>
 
-          <button class="js-remove list__itemsText list__itemsText--buttons">🚮</button>
+          <button class="js-remove list__buttons list__buttons--delete">⩂</button>
 
        </li>
      `;
