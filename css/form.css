@@ -1,35 +1,33 @@
 .form {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form__items {
-    padding: 5px;
-}
-
-.form__items--input {
-    flex-basis: 78%;
-    border: 2px solid lightgrey;
-    border-radius: 2px;
-}
-
-.form__items--button {
-    flex-basis: 20%;
-    background-color: teal;
-    color: white;
-    border: 2px solid teal;
-    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
 }
 
 @media (max-width: 767px) {
     .form {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .form__items {
-        flex-basis: 100%;
-        margin: 5px;
+        grid-template-columns: 1fr;
     }
 }
 
+.form__input {
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 83%);
+
+}
+
+.form__button {
+    padding: 10px;
+    border: none;
+    background-color: hsl(180, 100%, 25%);
+    color: white;
+
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.form__button:active {
+    background-color: hsl(180, 100%, 35%);
+}
