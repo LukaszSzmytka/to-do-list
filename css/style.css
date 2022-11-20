@@ -7,9 +7,6 @@ html {
 }
 
 .body {
-    max-width: 900px;
-    width: 100%;
-    margin: 50px auto;
     font-family: 'Ubuntu', sans-serif;
-    background-color: lightgray;
+    background-color: hsl(0, 0%, 90%);
 }
