@@ -1,17 +1,19 @@
 .list {
-    padding-inline-start: unset;
+    list-style: none;
+    padding: 0;
     margin: 0;
 }
-
+ 
 .list__items {
-    display: flex;
-    padding: 5px;
-    border-bottom: 2px solid lightgray;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid hsl(0, 0%, 83%);
 }
 
 .list__itemsText {
-    flex-grow: 1;
-    padding: 5px;
     word-break: break-all;
 }
 
@@ -19,10 +21,35 @@
     text-decoration: line-through;
 }
 
-.list__itemsText--buttons {
+.list__buttons {
     border: none;
-    background-color: transparent;
-    font-size: xx-large;
+    width: 30px;
+    height: 30px;
+    color: white;
     padding: 0;
-    flex-grow: 0;
+
+}
+
+.list__buttons--done {
+    background-color: hsl(120, 100%, 25%);
+}
+
+.list__buttons--done:hover {
+    background-color: hsl(120, 100%, 30%);
+}
+
+.list__buttons--done:active {
+    background-color: hsl(120, 100%, 35%);
+}
+
+.list__buttons--delete {
+    background-color: hsl(0, 100%, 35%);
+}
+
+.list__buttons--delete:hover {
+    background-color: hsl(0, 100%, 40%);
+}
+
+.list__buttons--delete:active {
+    background-color: hsl(0, 100%, 45%);
 }
