@@ -21,11 +21,18 @@
     border: none;
     background-color: hsl(180, 100%, 25%);
     color: white;
-
+    transition: 1s;
 }
 
 .form__button:hover {
     background-color: hsl(180, 100%, 30%);
+    transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+    .form__button:hover {
+        transform: scaleY(1.2);
+    }
 }
 
 .form__button:active {

@@ -13,6 +13,10 @@
     border-bottom: 1px solid hsl(0, 0%, 83%);
 }
 
+.list__items--hidden {
+    display: none;
+}
+
 .list__itemsText {
     word-break: break-all;
 }
@@ -32,6 +36,7 @@
 
 .list__buttons--done {
     background-color: hsl(120, 100%, 25%);
+    transition: 1s;
 }
 
 .list__buttons--done:hover {
@@ -44,6 +49,7 @@
 
 .list__buttons--delete {
     background-color: hsl(0, 100%, 35%);
+    transition: 1s;
 }
 
 .list__buttons--delete:hover {
