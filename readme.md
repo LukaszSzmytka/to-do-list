@@ -9,6 +9,8 @@
 1.  you can add new tasks
 2.  you can mark tasks as done or unmark them
 3.  you can delete tasks from list
+4.  you can mark all tasks as done
+5.  you can hide/unhide done tasks 
 
 ## Technologies and features:
 - HTML
@@ -16,7 +18,9 @@
 - FLEX
 - GRID
 - Media queries
+- Transforms, transitions
 - Javascript (EC6+)
+- Immutability
 
 ## Checkout my other projects:
 - https://lukaszszmytka.github.io/homepage/
