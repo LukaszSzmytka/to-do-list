@@ -3,12 +3,18 @@
   let hideDoneTasks = false;
 
   const addNewTask = (newTaskContent) => {
-    tasks = [...tasks, { content: newTaskContent }];
+    tasks = [
+      ...tasks, 
+      { content: newTaskContent },
+    ];
     render();
   };
 
   const removeTask = (taskIndex) => {
-    tasks = [...tasks.slice(0, taskIndex), ...tasks.slice(taskIndex + 1)];
+    tasks = [
+      ...tasks.slice(0, taskIndex), 
+      ...tasks.slice(taskIndex + 1),
+    ];
     render();
   };
 
@@ -73,11 +79,17 @@
       htmlString += `
     <li class="list__items${task.done && hideDoneTasks === true ? " list__items--hidden" : ""}">
 
-    <button class="js-done list__buttons list__buttons--done">${task.done ? "✓" : ""}</button>
+    <button class="js-done list__buttons list__buttons--done">
+    ${task.done ? "✓" : ""}
+    </button>
       
-    <span class="list__itemsText${task.done ? " list__itemsText--done" : ""}">${task.content}</span>
+    <span class="list__itemsText${task.done ? " list__itemsText--done" : ""}">
+    ${task.content}
+    </span>
 
-    <button class="js-remove list__buttons list__buttons--delete">⩂</button>
+    <button class="js-remove list__buttons list__buttons--delete">
+    🗑️
+    </button>
     </li>
      `;
     }
@@ -88,9 +100,13 @@
     let htmlButtons = "";
     if (tasks.length !== 0) {
       htmlButtons += `
-  <button class="js-hideAllDone section__hideButton">${hideDoneTasks === false ? "Ukryj" : "Pokaż"} ukończone</button>
-  
-  <button ${tasks.every(({ done }) => done) ? "disabled" : ""} class="js-toggleAllDone section__doneButton">Ukończ wszystkie</button>
+  <button class="js-hideAllDone section__hideButton">
+  ${hideDoneTasks === false ? "Ukryj" : "Pokaż"} ukończone
+  </button>
+
+  <button ${tasks.every(({ done }) => done) ? "disabled" : ""} class="js-toggleAllDone section__doneButton">
+  Ukończ wszystkie
+  </button>
   `;
    }
     document.querySelector(".js-buttons").innerHTML = htmlButtons;
@@ -115,7 +131,6 @@
     if (newTaskContent === "") {
       return;
     }
-
     addNewTask(newTaskContent);
     inputField.value = "";
   };
